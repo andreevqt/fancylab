@@ -1,0 +1,15 @@
+.menu {
+  @extend %reset-list;
+
+  &--column {
+    flex-direction: column;
+  }
+
+  &__item {
+    padding-right: 40px;
+  }
+
+  &__link {
+    display: block;
+  }
+}

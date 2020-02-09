@@ -1,0 +1,36 @@
+.footer {
+  padding: 150px 0;
+  background-color: $primary;
+  color: $white;
+
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+
+  }
+  
+
+  &__social {
+    box-shadow: $box-shadow-common;
+    border-radius: 50%;
+    svg {
+      fill: $white;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__copyright {
+    font-size: 12px;
+    line-height: 2;
+    a {
+      color: $purple;
+    }
+    @include media-breakpoint-down(sm) {
+     text-align: center;
+    }
+  }
+}

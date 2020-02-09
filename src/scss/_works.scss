@@ -1,0 +1,100 @@
+.works {
+  margin-bottom: 40px;
+}
+
+.work {
+  &__inner {
+    height: 200px;
+  }
+
+  &__image {
+    border-radius: 0.5rem;
+    margin-bottom: 20px;
+    box-shadow: $box-shadow-common;
+    width: 100%;
+    height: auto;
+  }
+
+  &__title {
+  }
+
+  &__description {
+    font-size: 13px;
+    color: $text-muted;
+  }
+}
+
+.view-all {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.125em;
+  span {
+    color: $purple;
+  }
+}
+
+.work-preview {
+  border-radius: 0.5rem;
+  background-color: $primary;
+  box-shadow: $box-shadow-common;
+  position: relative;
+  $parent: &;
+  margin-bottom: 30px;
+
+  &:hover {
+    #{$parent}__overlay {
+      visibility: visible;
+      opacity: 0.9;
+    }    
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    border-radius: .5rem;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    background-color: $purple;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+  }
+
+  &__image {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: auto;
+  }
+
+  &__link {
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__zoom {
+    fill: $white;
+  }
+}
+
+.preview {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

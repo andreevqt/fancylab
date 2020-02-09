@@ -6,7 +6,12 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'App'
+    title: 'FancyLab',
+    titleTemplate: '',
+    description: 'Html templates',
+    twitterUsername: '',
+    image: '',
+    url: 'https://fancylab.xyz'
   },
   plugins: [
     { resolve: 'gatsby-plugin-sass' },

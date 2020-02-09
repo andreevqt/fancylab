@@ -7,17 +7,17 @@ const MenuLink = (props) => {
   )
 }
 
-const Menu = (props) => {
+const Menu = ({ className = '' }) => {
   return (
-    <ul className="menu">
+    <ul className={"menu " + className}>
       <li className="menu__item">
         <MenuLink to="/">Home</MenuLink>
       </li>
       <li className="menu__item">
-        <MenuLink to="/files">Files</MenuLink>
+        <MenuLink to="/works" partiallyActive={true}>Works</MenuLink>
       </li>
       <li className="menu__item">
-        <MenuLink to="/about">About</MenuLink>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfh4QVCnt3ZwqoHIArfqnh5ncX3JWafOOUxRea4LTVoFvomzg/viewform">Contacts</a>
       </li>
     </ul>
   )

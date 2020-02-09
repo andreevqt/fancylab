@@ -1,0 +1,59 @@
+{
+  "works": [
+    {
+      "id": 1,
+      "title": "Take",
+      "slug": "take",
+      "subtitle": "Application landing page",
+      "description": "Responsive application landing page using bootstrap framework",
+      "preview": "/images/take.jpg",
+      "link": "/works/take",
+      "pagesLink" : "https://qprquo.github.io/take",
+      "source": "https://github.com/qprquo/take"
+    },
+    {
+      "id": 2,
+      "title": "Weather App",
+      "slug": "weather-app",
+      "subtitle": "Weather Application landing page",
+      "description": "Responsive application landing page using bootstrap framework",
+      "preview": "/images/weather-app.png",
+      "link": "/works/weather-app",
+      "pagesLink" : "https://qprquo.github.io/weather-app",
+      "source": "https://github.com/qprquo/weather-app"
+    },
+    {
+      "id": 3,
+      "title": "Startuply",
+      "slug": "startuply",
+      "subtitle": "Web design agency landing page",
+      "description": "Responsive web design agency landing page using bootstrap framework",
+      "preview": "/images/startuply.jpg",
+      "link": "/works/startuply",
+      "pagesLink" : "https://qprquo.github.io/startuply",
+      "source": "https://github.com/qprquo/startuply"
+    },
+    {
+      "id": 4,
+      "title": "Sevi",
+      "slug": "sevi",
+      "subtitle": "Online library landing page",
+      "description": "Responsive library landing page using bootstrap framework",
+      "preview": "/images/sevi.jpg",
+      "link": "/works/sevi",
+      "pagesLink" : "https://qprquo.github.io/sevi",
+      "source": "https://github.com/qprquo/sevi"
+    },
+    {
+      "id": 5,
+      "title": "AppLab",
+      "slug": "applab",
+      "subtitle": "Application landing page",
+      "description": "Responsive application landing page using bootstrap framework",
+      "preview": "/images/applab.jpg",
+      "link": "/works/applab",
+      "pagesLink" : "https://qprquo.github.io/AppLab",
+      "source": "https://github.com/qprquo/AppLab"
+    }
+  ]
+}

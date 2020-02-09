@@ -1,0 +1,96 @@
+.header {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: rgba($white, 0.7);
+  background-color: transparent;
+  & > .container {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    fill: $white;
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    letter-spacing: 1.2px;
+    display: flex;
+    align-items: center;
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+    svg {
+      margin-right: 15px;
+    }
+  }
+  &__menu-wrapper {
+    padding-left: 30px;
+    margin-left: auto;
+    @include media-breakpoint-down(sm) {
+      white-space: nowrap;
+      overflow-x: auto;
+      .menu__item {
+        padding: 25px 10px;
+      }
+    }
+  }
+  &__menu {
+    .menu__item {
+      padding: 25px 25px;
+      a {
+        &::before,
+        &::after {
+          display: inline-block;
+          transition: transform 0.25s linear;
+        }
+
+        &::before {
+          margin-right: 5px;
+          content: "[";
+        }
+        &::after {
+          margin-left: 5px;
+          content: "]";
+        }
+      }
+
+      .menu__link:hover,
+      .menu__link--active {
+        color: $white;
+        &::before {
+          color: $purple;
+          transform: translate(-5px);
+        }
+        &::after {
+          color: $purple;
+          transform: translate(5px);
+        }
+      }
+    }
+  }
+  &__right,
+  &__left {
+    display: flex;
+  }
+
+  &__left {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.logo-blink {
+  animation: logo-blink 1.3s infinite linear;
+}
+
+@keyframes logo-blink {
+  from,
+  to {
+    fill: none;
+  }
+  50% {
+    fill: $white;
+  }
+}

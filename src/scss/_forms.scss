@@ -1,0 +1,17 @@
+label {
+  // font-weight: 700;
+}
+
+input {
+  &:focus {
+    border-color: $purple;
+  }
+}
+
+.invalid {
+  border-color: $danger;
+}
+
+.invalid-help {
+  color: $danger;
+}

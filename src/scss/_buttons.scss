@@ -1,0 +1,107 @@
+.btn-special,
+.btn-special-purple,
+.btn-link {
+  border-width: 2px;
+  padding: 15px 30px;
+  line-height: 1;
+  box-shadow: $box-shadow-common;
+  font-weight: 700;
+}
+
+.btn-special {
+  @include button-variant($primary, $primary);
+  &--purple-color {
+    color: $purple;
+    &:hover {
+      color: $purple;
+    }
+  }
+}
+
+.btn-link {
+  box-shadow: none;
+}
+
+.btn-with-icon {
+  display: inline-flex;
+  align-items: center;
+  .btn__icon {
+    margin-right: 0.75rem;
+    fill: currentColor;
+  }
+}
+
+.btn-special-purple {
+  @include button-variant($purple, $purple);
+  color: $primary;
+
+  display: flex;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    color: $primary;
+  }
+
+  &__icon {
+    margin-right: 0.5rem;
+    fill: currentCOlor;
+  }
+}
+
+.btn-down {
+  $bg-hover: #d2d3d4;
+  padding: 0;
+  border: none;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  background-color: $white;
+  color: $primary;
+  border-radius: 50%;
+  transition: background 0.3s linear, transform 0.3s linear;
+  box-shadow: $box-shadow-common;
+  transform: translateY(0);
+  text-align: center;
+  animation: btnBounce 2s linear infinite;
+  svg {
+    margin-top: 4px;
+    transform: rotate(180deg);
+  }
+  &:hover {
+    color: $primary;
+    background-color: $bg-hover;
+    transform: translateY(3px);
+    animation-play-state: paused;
+  }
+}
+
+@keyframes btnBounce {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  60% {
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}

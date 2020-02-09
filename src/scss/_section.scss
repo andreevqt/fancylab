@@ -1,0 +1,30 @@
+.section {
+  padding: 5rem 0;
+
+  &--after-hero {
+    margin-top: 52px;
+  }
+
+
+  @include media-breakpoint-down(sm) {
+    padding: 2rem 0;
+  }
+
+  
+}
+
+.section-heading {
+  // padding-top: 10px;
+  margin-bottom: 20px;
+  position: relative;
+
+  // &::before {
+  //   content: "";
+  //   width: 60px;
+  //   height: 2px;
+  //   position: absolute;
+  //   background-color: $purple;
+  //   left: 0;
+  //   top: 0;
+  // }
+}

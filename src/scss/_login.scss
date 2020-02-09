@@ -1,0 +1,23 @@
+.login-form-wrap {
+  background-color: $primary;
+  min-height: 100vh
+}
+
+.login-box {
+  margin-top: 200px;
+  padding: 50px 40px;
+  background-color: $light-gray;
+  box-shadow: $box-shadow-common;
+  border-radius: .5rem;
+
+  &__heading {
+    padding-bottom: 20px;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid $primary;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 15px;
+  }
+
+}
