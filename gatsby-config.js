@@ -13,6 +13,7 @@ module.exports = {
     image: '',
     url: 'https://fancylab.xyz'
   },
+  pathPrefix: "/website",
   plugins: [
     { resolve: 'gatsby-plugin-sass' },
     {
