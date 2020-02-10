@@ -8,7 +8,6 @@ const Works = ({ data, wrapperClass = "row works" }) => {
     <div className={wrapperClass}>
       {
         data.map((work) => {
-          console.log(asset(work.preview));
           return (
             <div key={work.id} className="col-md-4 col-sm-6 mb-5">
               <div className="work">

@@ -1,10 +1,8 @@
 import React from 'react';
 import $ from 'jquery';
 
-
 const TopPanel = ({ backLink }) => {
   let self = null;
-
   const onClose = (e) => {
     console.log(self);
     $(self).remove();
@@ -28,17 +26,15 @@ const TopPanel = ({ backLink }) => {
       <button onClick={onClose} className="top-panel__close" title="Remove iframe">
         <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
       </button>
-
     </div>
   );
-
 }
 
 const Preview = ({ pageContext }) => {
   const { work } = pageContext;
   return (
     <div className="preview">
-      <TopPanel backLink={`/works/${work.slug}`} />
+      <TopPanel backLink={`/templates/${work.slug}`} />
       <iframe src={work.pagesLink} width="100%" height="100%" frameBorder="0"></iframe>
     </div>
   );
