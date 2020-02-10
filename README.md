@@ -1,4 +1,4 @@
-# Source code of FancyLab.xyz
+# Source code of fancylab.xyz
 ## local development
 `` npm run develop ``
 ## build
