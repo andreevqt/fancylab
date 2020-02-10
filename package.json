@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
+    "disqus-react": "^1.0.7",
     "gatsby": "^2.19.7",
     "gatsby-plugin-sass": "^2.1.28",
     "gatsby-source-filesystem": "^2.1.48",

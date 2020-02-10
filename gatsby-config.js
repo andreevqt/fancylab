@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: 'FancyLab - HTML templates',
-    titleTemplate: '',
+    titleTemplate: 'FancyLab - HTML templates | %s',
     description: 'HTML templates',
     twitterUsername: '',
     image: '',
