@@ -33,4 +33,8 @@
      text-align: center;
     }
   }
+
+  @include media-breakpoint-down(sm) {
+    padding: 65px 0;
+  }
 }

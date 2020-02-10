@@ -13,6 +13,7 @@
 
 body {
   position: relative;
+  overflow-x: hidden;
 }
 
 .w-100 {
@@ -37,7 +38,6 @@ body {
   background-color: $purple;
   border-radius: 50%;
   border: 0;
-  
 }
 
 a {
@@ -78,7 +78,7 @@ a {
     padding-bottom: 20px;
     position: relative;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
@@ -122,4 +122,18 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.content-wrapper {
+  transform: translateX(0);
+  transition: transform 0.3s linear;
+}
+
+.mobile-menu-is-shown {
+  .content-wrapper {
+    transform: translateX(-$mobile-menu-width);
+    @include media-breakpoint-down(sm) {
+      transform: translateX(-100vw);
+    }
+  }
 }

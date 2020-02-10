@@ -9,3 +9,13 @@ $light-gray: #f2f2f2;
 $yellow: #ffff00;
 $white: #fff;
 $black: #000;
+
+$toggle-height: 20px;
+$toggle-width: 30px;
+$toggle-padding: 3px;
+$toggle-inner-height: 2px;
+$toggle-bg: transparent;
+$toggle-color: $white;
+$toggle-dy: ($toggle-height - $toggle-padding * 2 - $toggle-inner-height) / 2;
+
+$mobile-menu-width: 400px;

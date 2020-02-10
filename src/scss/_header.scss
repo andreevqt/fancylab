@@ -6,14 +6,14 @@
   right: 0;
   color: rgba($white, 0.7);
   background-color: transparent;
+  padding-top: 15px;
+  padding-bottom: 15px;
   & > .container {
     display: flex;
     align-items: center;
   }
   &__logo {
     fill: $white;
-    font-family: 'VT323', monospace;
-    font-size: 24px;
     letter-spacing: 1.2px;
     display: flex;
     align-items: center;
@@ -25,9 +25,17 @@
       margin-right: 15px;
     }
   }
+
+  &__logo-text {
+    line-height: 1;
+    font-family: "VT323", monospace;
+    font-size: 24px;
+  }
   &__menu-wrapper {
     padding-left: 30px;
     margin-left: auto;
+    display: flex;
+    align-items: center;
     @include media-breakpoint-down(sm) {
       white-space: nowrap;
       overflow-x: auto;
@@ -36,39 +44,17 @@
       }
     }
   }
+
+  &__toggle {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.3s linear 0.3s, transform 0.3s linear 0.3s;
+  }
+
   &__menu {
-    .menu__item {
-      padding: 25px 25px;
-      a {
-        &::before,
-        &::after {
-          display: inline-block;
-          transition: transform 0.25s linear;
-        }
-
-        &::before {
-          margin-right: 5px;
-          content: "[";
-        }
-        &::after {
-          margin-left: 5px;
-          content: "]";
-        }
-      }
-
-      .menu__link:hover,
-      .menu__link--active {
-        color: $white;
-        &::before {
-          color: $purple;
-          transform: translate(-5px);
-        }
-        &::after {
-          color: $purple;
-          transform: translate(5px);
-        }
-      }
-    }
   }
   &__right,
   &__left {
@@ -92,5 +78,12 @@
   }
   50% {
     fill: $white;
+  }
+}
+
+.mobile-menu-is-shown {
+  .header__toggle {
+    opacity: 0;
+    transform: translateX(-50px);
   }
 }

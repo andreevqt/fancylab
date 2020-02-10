@@ -1,0 +1,72 @@
+.mobile-menu {
+  position: relative;
+  width: $mobile-menu-width;
+  transform: translateX($mobile-menu-width);
+  background-color: #e6e7e8;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: transform 0.3s linear;
+  padding-top: 100px;
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    &::after,
+    &::before {
+      background-color: $primary;
+    }
+  }
+  &__menu {
+    flex-direction: column;
+    align-items: center;
+    color: $primary;
+    .menu__link {
+      &::before,
+      &::after {
+        opacity: 0;
+        display: inline-block;
+        transition: transform 0.25s linear, opacity 0.2s linear;
+        transform: translateX(0);
+      }
+      &::before {
+        margin-right: 5px;
+        content: "[";
+      }
+      &::after {
+        margin-left: 5px;
+        content: "]";
+      }
+
+      &:hover,
+      &--active {
+        color: $primary;
+        &::before,
+        &::after {
+          opacity: 1;
+          color: darken($purple, 10%);
+        }
+        &::before {
+          transform: translateX(-5px);
+        }
+        &::after {
+          transform: translateX(5px);
+        }
+      }
+    }
+    .menu__item {
+      padding: 15px 25px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100vw;
+  }
+}
+
+.mobile-menu-is-shown {
+  .mobile-menu {
+    transform: translateX(0);
+  }
+}
