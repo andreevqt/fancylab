@@ -20,7 +20,7 @@ const Work = ({
   const { title, slug, link, description } = work
   const disqusConfig = {
     url: url + link,
-    shortname: "fancylab.xyz",
+    shortname: "fancylab-xyz",
     config: { identifier: slug, title },
   };
   return (
