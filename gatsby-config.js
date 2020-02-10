@@ -14,6 +14,7 @@ module.exports = {
     url: 'https://fancylab.xyz'
   },
   pathPrefix: "/website",
+  assetPrefix: '/website',
   plugins: [
     { resolve: 'gatsby-plugin-sass' },
     {

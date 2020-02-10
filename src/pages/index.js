@@ -2,10 +2,10 @@ import React from "react"
 import Layout from '../components/Layout'
 import Hero from '../components/hero';
 import data from '../../data/data';
-import { latest } from '../util/util';
+import Works from '../components/Works';
+import { latest, asset } from '../util/util';
 
 const Index = () => {
-  const works = latest(data.works, 3);
   return (
     <Layout pageTitle="Home">
       <Hero
@@ -21,7 +21,7 @@ const Index = () => {
         }}
         rightCol={() => {
           return (
-            <img className="hero__rocket" src="/images/rocket.svg" alt="Rocket" />
+            <img className="hero__rocket" src={asset("/images/rocket.svg")} alt="Rocket" />
           )
         }}
         hasButton={true}
@@ -29,23 +29,9 @@ const Index = () => {
       />
       <div id="works" className="section section--after-hero">
         <div className="container">
-          <h2 className="section-heading">Works</h2>
-          <div className="row works">
-            {works.map((work) => (
-              <div key={work.id} className="col-md-4 col-sm-6 mb-5">
-                <div className="work">
-                  <a href={work.link}>
-                    <img className="work__image" src={work.preview} alt={work.title} />
-                  </a>
-                  <div className="work-title">{work.title}</div>
-                  <div className="work__description">
-                    {work.subtitle}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <a href="/works" className="btn btn-special view-all">View <span>All</span></a>
+          <h2 className="section-heading">Templates</h2>
+          <Works wrapperClass="row works" data={latest(data.works, 3)} />
+          <a href="/templates" className="btn btn-special view-all">View <span>All</span></a>
         </div>
       </div>
     </Layout>

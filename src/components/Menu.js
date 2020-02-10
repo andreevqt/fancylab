@@ -14,7 +14,7 @@ const Menu = ({ className = '' }) => {
         <MenuLink to="/">Home</MenuLink>
       </li>
       <li className="menu__item">
-        <MenuLink to="/works" partiallyActive={true}>Works</MenuLink>
+        <MenuLink to="/templates" partiallyActive={true}>Templates</MenuLink>
       </li>
       <li className="menu__item">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfh4QVCnt3ZwqoHIArfqnh5ncX3JWafOOUxRea4LTVoFvomzg/viewform">Contacts</a>
