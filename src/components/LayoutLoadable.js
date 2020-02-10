@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import { useStaticQuery, graphql } from 'gatsby';
+import {asset} from '../util/util';
 import Seo from './Seo';
 import $ from 'jquery';
 import 'particles.js';
@@ -12,7 +13,7 @@ const Layout = ({
 }) => {
 
   useEffect(() => {
-    window.particlesJS.load('particles', '/particlesjs-config.json', (e) => {
+    window.particlesJS.load('particles',  asset('/particlesjs-config.json'), (e) => {
     })
   }, [])
 

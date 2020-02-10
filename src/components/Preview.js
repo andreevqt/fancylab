@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 
+
 const TopPanel = ({ backLink }) => {
   let self = null;
 

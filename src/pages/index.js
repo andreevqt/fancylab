@@ -4,6 +4,7 @@ import Hero from '../components/hero';
 import data from '../../data/data';
 import Works from '../components/Works';
 import { latest, asset } from '../util/util';
+import { Link } from 'gatsby';
 
 const Index = () => {
   return (
@@ -31,7 +32,7 @@ const Index = () => {
         <div className="container">
           <h2 className="section-heading">Templates</h2>
           <Works wrapperClass="row works" data={latest(data.works, 3)} />
-          <a href="/templates" className="btn btn-special view-all">View <span>All</span></a>
+          <Link to="/templates" className="btn btn-special view-all">View <span>All</span></Link>
         </div>
       </div>
     </Layout>

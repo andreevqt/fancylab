@@ -5,6 +5,6 @@ export const latest = (arr, limit) => {
 }
 
 export const asset = (path) => {
-  const env = process.env.GATSBY_ENV;
-  return env !== "development" ? path : config.pathPrefix + '/' + path;
+  const env = process.env.GATSBY_ENV.trim();
+  return env === "production" && config.pathPrefix ? `${config.pathPrefix}${path}` : path;
 }
