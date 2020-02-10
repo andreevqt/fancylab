@@ -7,14 +7,14 @@ exports.createPages = ({ boundActionCreators }) => {
   works.forEach(( work ) => {
     const { slug } = work;
     createPage({
-      path: `/works/${slug}`,
+      path: `/templates/${slug}`,
       component: require.resolve("./src/components/Work"),
       context: {
         work
       }
     });
     createPage({
-      path: `/works/${slug}/preview`,
+      path: `/templates/${slug}/preview`,
       component: require.resolve("./src/components/Preview"),
       context: {
         work
