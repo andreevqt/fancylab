@@ -2,8 +2,12 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 const MenuLink = (props) => {
+  const onClick = (e) => {
+    document.body.classList.remove('mobile-menu-is-shown');
+  }
+
   return (
-    <Link activeClassName="menu__link--active" className="menu__link"  {...props} />
+    <Link onClick={onClick} activeClassName="menu__link--active" className="menu__link"  {...props} />
   )
 }
 
