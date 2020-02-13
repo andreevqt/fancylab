@@ -19,7 +19,7 @@ const MobileMenu = () => {
   return (
     <div className="mobile-menu">
       <ul className="mobile-menu__menu menu">
-      <button onClick={onClick} className="mobile-menu__close toggle toggle--cross"></button>
+        <button onClick={onClick} className="mobile-menu__close toggle toggle--cross"></button>
         <li className="menu__item">
           <MenuLink to="/">Home</MenuLink>
         </li>

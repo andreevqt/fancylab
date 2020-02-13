@@ -42,7 +42,7 @@ const Hero = ({
 
   return (
     <div id="hero" className={classes.join(' ')}>
-      {hasParticles && <div id="particles" className="hero__particles"></div>}
+      {hasParticles && <div className="hero__particles"></div>}
       <div className="container">
         <div className="row">
           <div className="col-md-7" style={{ overflowX: "hidden" }}>

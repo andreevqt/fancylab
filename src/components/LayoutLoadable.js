@@ -5,18 +5,11 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { asset } from '../util/util';
 import Seo from './Seo';
 import MobileMenu from './MobileMenu';
-import $ from 'jquery';
-import 'particles.js';
 
 const Layout = ({
   seo,
   children
 }) => {
-
-  useEffect(() => {
-    window.particlesJS.load('particles', asset('/particlesjs-config.json'), (e) => {
-    })
-  }, [])
 
   const data = useStaticQuery(
     graphql`

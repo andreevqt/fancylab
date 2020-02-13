@@ -26,7 +26,9 @@
     bottom: 0;
     right: 0;
     background-color: $primary;
-    background-position: 50% 50%;
+    background-image: url("../../static/images/particles.png");
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 
