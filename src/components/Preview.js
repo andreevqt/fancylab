@@ -1,11 +1,14 @@
-import React from 'react';
-import $ from 'jquery';
+import React, { useEffect } from 'react';
 
 const TopPanel = ({ backLink }) => {
   let self = null;
+
+  useEffect(() => {
+    document.body.classList.add("top-panel-is-shown");
+  }, []);
+
   const onClose = (e) => {
-    console.log(self);
-    $(self).remove();
+    document.body.classList.remove("top-panel-is-shown");
   }
   return (
     <div className="top-panel" ref={(el) => self = el}>
@@ -37,7 +40,7 @@ const Preview = ({ pageContext }) => {
   return (
     <div className="preview">
       <TopPanel backLink={`/templates/${work.slug}`} />
-      <iframe src={work.pagesLink} width="100%" height="100%" frameBorder="0"></iframe>
+      <iframe className="preview__iframe" src={work.pagesLink}></iframe>
     </div>
   );
 }
