@@ -54,6 +54,28 @@
       "link": "/templates/applab",
       "pagesLink" : "https://qprquo.github.io/AppLab",
       "source": "https://github.com/qprquo/AppLab"
+    },
+    {
+      "id": 6,
+      "title": "Webovio",
+      "slug": "webovio",
+      "subtitle": "Web design agency landing page",
+      "description": "Web design agency landing page using bootstrap framework",
+      "preview": "/images/webovio.png",
+      "link": "/templates/webovio",
+      "pagesLink" : "https://qprquo.github.io/webovio",
+      "source": "https://github.com/qprquo/webovio"
+    },
+    {
+      "id": 7,
+      "title": "Productly",
+      "slug": "productly",
+      "subtitle": "Web developing agency landing page",
+      "description": "Web developing agency landing page using bootstrap framework",
+      "preview": "/images/productly.png",
+      "link": "/templates/productly",
+      "pagesLink" : "https://qprquo.github.io/productly",
+      "source": "https://github.com/qprquo/productly"
     }
   ]
 }
