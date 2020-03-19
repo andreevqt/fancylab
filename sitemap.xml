@@ -10,6 +10,10 @@
 <url> <loc>https://fancylab.xyz/templates/sevi/preview</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://fancylab.xyz/templates/applab</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://fancylab.xyz/templates/applab/preview</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://fancylab.xyz/templates/webovio</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://fancylab.xyz/templates/webovio/preview</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://fancylab.xyz/templates/productly</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://fancylab.xyz/templates/productly/preview</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://fancylab.xyz/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://fancylab.xyz/templates/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
