@@ -8,19 +8,23 @@
   background-color: transparent;
   padding-top: 15px;
   padding-bottom: 15px;
+
   & > .container {
     display: flex;
     align-items: center;
   }
+
   &__logo {
     fill: $white;
     letter-spacing: 1.2px;
     display: flex;
     align-items: center;
     color: $white;
+
     &:hover {
       color: $white;
     }
+
     svg {
       margin-right: 15px;
     }
@@ -28,19 +32,26 @@
 
   &__logo-text {
     line-height: 1;
-    font-family: "VT323", monospace;
-    font-size: 24px;
+    font-weight: 700;
+    font-size: 18px;
+    
   }
+
   &__menu-wrapper {
     padding-left: 30px;
     margin-left: auto;
     display: flex;
     align-items: center;
-    @include media-breakpoint-down(sm) {
-      white-space: nowrap;
-      overflow-x: auto;
-      .menu__item {
-        padding: 25px 10px;
+    white-space: nowrap;
+    overflow-x: auto;
+    .menu__item {
+      padding: 25px 10px;
+    }
+    @include media-breakpoint-up(md) {
+      white-space: wrap;
+      overflow-x: visible;
+      .menu-item {
+        padding: 0 40px 0 0;
       }
     }
   }
@@ -54,8 +65,6 @@
     transition: opacity 0.3s linear 0.3s, transform 0.3s linear 0.3s;
   }
 
-  &__menu {
-  }
   &__right,
   &__left {
     display: flex;

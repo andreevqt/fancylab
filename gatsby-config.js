@@ -11,7 +11,7 @@ module.exports = {
     description: 'HTML templates',
     twitterUsername: '',
     image: '',
-    url: 'https://fancylab.xyz'
+    siteUrl: 'https://fancylab.xyz'
   },
   plugins: [
     { resolve: 'gatsby-plugin-sass' },
@@ -28,6 +28,14 @@ module.exports = {
         trackingId: "UA-158373129-1",
         pageTransitionDelay: 0,
       }
-    }
+    },
+    { resolve: 'gatsby-plugin-sitemap' },
+    {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        color: `#bd93f9`,
+        showSpinner: false,
+      }
+    },
   ]
 }

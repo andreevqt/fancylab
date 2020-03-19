@@ -3,7 +3,6 @@ import Layout from './Layout';
 import Hero from './Hero';
 import { asset } from '../util/util';
 import { Link } from 'gatsby';
-import { DiscussionEmbed } from "disqus-react"
 import { graphql } from 'gatsby';
 
 const Work = ({
@@ -14,15 +13,10 @@ const Work = ({
     }
   }
 }) => {
-
   const { url } = siteMetadata;
   const { work } = pageContext;
   const { title, slug, link, description } = work
-  const disqusConfig = {
-    url: url + link,
-    shortname: "fancylab-xyz",
-    config: { identifier: slug, title },
-  };
+  
   return (
     <Layout seo={{ title: work.title, description: work.description }}>
       <Hero
@@ -68,12 +62,6 @@ const Work = ({
               </a>
             </div>
           </div>
-          <div className="row">
-            <div className="col comments">
-              <h2 className="section-heading">Comments</h2>
-              <DiscussionEmbed {...disqusConfig} />
-            </div>
-          </div>
         </div>
       </div>
     </Layout>
@@ -83,7 +71,7 @@ const Work = ({
 export const pageQuery = graphql`query {
   site {
     siteMetadata {
-      url
+      siteUrl
     }
   }
 }`;
