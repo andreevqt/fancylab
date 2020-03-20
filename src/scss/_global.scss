@@ -11,11 +11,7 @@
   background-size: cover;
 }
 
-button:focus {
-  outline: none;
-}
-
-:focus {
+*:focus {
   outline: none;
 }
 

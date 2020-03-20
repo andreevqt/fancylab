@@ -32,7 +32,7 @@ const Index = () => {
         <div className="container">
           <h2 className="section-heading">Templates</h2>
           <Works wrapperClass="row works" data={latest(data.works, 3)} />
-          <Link to="/templates" className="btn btn-special view-all">View <span>All</span></Link>
+          <Link to="/templates" className="btn btn-special view-all mb-md-5 mb-3">View <span>All</span></Link>
         </div>
       </div>
     </Layout>

@@ -9,7 +9,7 @@ const Works = ({ data, wrapperClass = "row works" }) => {
       {
         data.map((work) => {
           return (
-            <div key={work.id} className="col-md-4 col-sm-6 mb-5">
+            <div key={work.id} className="col-md-4 col-sm-6 mb-md-5 mb-3">
               <div className="work">
                 <Link to={work.link} className="work__link">
                   <img className="work__image" src={asset(work.preview)} alt={work.title} />
