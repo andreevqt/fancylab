@@ -1,8 +1,6 @@
-.works {
-  /* margin-bottom: 40px; */
-}
-
 .work {
+  $parent: &;
+
   &__inner {
     height: 200px;
   }
@@ -13,6 +11,8 @@
     box-shadow: $box-shadow-common-blured;
     width: 100%;
     height: auto;
+    transform: translateY(0);
+    transition: transform 0.15s ease-in;
   }
 
   &__title {
@@ -21,6 +21,15 @@
   &__description {
     font-size: 13px;
     color: $text-muted;
+  }
+
+  &__link {
+    display: block;
+    &:hover {
+      #{$parent}__image {
+        transform: translateY(-5px);
+      }
+    }
   }
 }
 

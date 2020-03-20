@@ -37,5 +37,7 @@ module.exports = {
         showSpinner: false,
       }
     },
+    { resolve: 'gatsby-plugin-react-helmet'}
   ]
+  
 }

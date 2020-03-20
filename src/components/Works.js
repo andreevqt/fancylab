@@ -11,7 +11,7 @@ const Works = ({ data, wrapperClass = "row works" }) => {
           return (
             <div key={work.id} className="col-md-4 col-sm-6 mb-5">
               <div className="work">
-                <Link to={work.link} className={null}>
+                <Link to={work.link} className="work__link">
                   <img className="work__image" src={asset(work.preview)} alt={work.title} />
                 </Link>
                 <div className="work__title">{work.title}</div>

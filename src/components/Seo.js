@@ -17,14 +17,14 @@ const SEO = ({ title, description, image, pathname, article }) => (
       },
     }) => {
       const seo = {
-        title: title || defaultTitle,
+        title: defaultTitle + (title ? " | " + title : ""),
         description: description || defaultDescription,
         image: `${siteUrl}${image || defaultImage}`,
         url: `${siteUrl}${pathname || "/"}`,
       }
       return (
         <>
-          <Helmet title={seo.title} titleTemplate={titleTemplate}>
+          <Helmet title={seo.title}>
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
             {seo.url && <meta property="og:url" content={seo.url} />}

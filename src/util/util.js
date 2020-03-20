@@ -6,7 +6,7 @@ export const latest = (arr, limit) => {
 
 export const asset = (path) => {
   const env = process.env.GATSBY_ENV;
-  return env === "production" && config.pathPrefix ? `${config.pathPrefix}${path}` : path;
+  return env === "production" && config.pathPrefix ? `${config.pathPrefix}${path}` : `${path}`;
 }
 
 export const sleep = (ms) => {
