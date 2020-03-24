@@ -4,6 +4,7 @@ import Hero from './Hero';
 import { asset } from '../util/util';
 import { Link } from 'gatsby';
 import { graphql } from 'gatsby';
+import LazyImage from './LazyImage';
 
 const Work = ({
   pageContext,

@@ -7,7 +7,7 @@ import { latest } from '../util/util'
 
 const Templates = () => {
   return (
-    <Layout>
+    <Layout seo={{ description: "FancyLabs - collection of free, opensource html themes, landing pages, templates - these themes easy to install, customize and deploy." }}>
       <Hero className="hero--small"
         leftCol={() => {
           return (
