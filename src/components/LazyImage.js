@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import LazyLoad from "vanilla-lazyload";
-import Skeleton from "react-loading-skeleton";
 
-if (!document.lazyLoadInstance) {
+if (typeof document !== "undefined" && !document.lazyLoadInstance) {
   document.lazyLoadInstance = new LazyLoad({
     elements_selector: ".lazy",
     load_delay: 1000
@@ -17,40 +16,45 @@ const LazyImage = ({
   width,
   height,
   className = "",
-  skeletonOpts = { width: "100%", height: "190px" }
+  onLoad,
+  style,
 }) => {
   let el = null;
-  const [loading, setLoading] = useState(true);
-
   useEffect(() => {
-    document.lazyLoadInstance.update();
-    el.addEventListener("load", () => setLoading(false));
+    if (typeof document !== "undefined" && document.lazyLoadInstance) {
+      document.lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy",
+        load_delay: 3000
+      });
+    }
+
+    if (typeof document !== "undefined") {
+      document.lazyLoadInstance.update();
+    }
+
+    el.addEventListener("load", onLoad);
   }, []);
 
   useEffect(() => {
     return () => {
-      document.lazyLoadInstance.update();
+      if (typeof document !== "undefined") {
+        document.lazyLoadInstance.update();
+      }
     }
   });
 
   return (
-    <>
-      {loading
-        &&
-        <Skeleton {...skeletonOpts} />
-      }
-      <img
-        style={{ visibility: (loading ? "hidden" : "visible") }}
-        ref={(element) => el = element}
-        alt={alt}
-        data-src={src}
-        data-srcset={srcset}
-        data-sizes={sizes}
-        width={width}
-        height={height}
-        className={`lazy ${className}`}
-      />
-    </>
+    <img
+      ref={(element) => el = element}
+      alt={alt}
+      data-src={src}
+      data-srcset={srcset}
+      data-sizes={sizes}
+      width={width}
+      height={height}
+      className={`lazy ${className}`}
+      style={style}
+    />
   )
 }
 
