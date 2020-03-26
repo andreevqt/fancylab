@@ -2,12 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import LazyLoad from "vanilla-lazyload";
 import Skeleton from "react-loading-skeleton";
 
-if (!document.lazyLoadInstance) {
-  document.lazyLoadInstance = new LazyLoad({
-    elements_selector: ".lazy",
-    load_delay: 1000
-  });
-}
+let lazyLoadInstance = new LazyLoad({
+  elements_selector: ".lazy",
+  load_delay: 1000
+});
 
 const LazyImage = ({
   alt,
@@ -23,13 +21,13 @@ const LazyImage = ({
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    document.lazyLoadInstance.update();
+    lazyLoadInstance.update();
     el.addEventListener("load", () => setLoading(false));
   }, []);
 
   useEffect(() => {
     return () => {
-      document.lazyLoadInstance.update();
+      lazyLoadInstance.update();
     }
   });
 
