@@ -5,7 +5,7 @@ import Content from "./Content"
 import { asset, styleHidden, useWindowSize, breakpoints } from '../util/util';
 import { Link } from 'gatsby';
 import { graphql } from 'gatsby';
-import Skeleton from "react-loading-skeleton";
+import Skeleton from "./Skeleton";
 import LazyImage from "./LazyImage";
 
 const Work = ({
