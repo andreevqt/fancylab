@@ -1,5 +1,6 @@
 import React from 'react';
 import { asset } from "../util/util";
+import { Link } from "gatsby";
 
 const Header = () => {
   const onClick = (e) => {
@@ -9,10 +10,10 @@ const Header = () => {
   return (
     <header className="header">
       <div className="container">
-        <a href='/' className="header__logo">
+        <Link to="/" className="header__logo">
           <img src={asset("/images/logo-purple.svg")} alt="fancylabz.xyz" />
           <span className="header__logo-text"><span>Fancy</span>Lab</span>
-        </a>
+        </Link>
       </div>
       <button onClick={onClick} className="header__toggle toggle">
         <div className="toggle__inner"></div>

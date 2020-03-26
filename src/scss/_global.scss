@@ -11,7 +11,8 @@
   background-size: cover;
 }
 
-*:focus {
+*:focus,
+button:focus {
   outline: none;
 }
 
@@ -105,16 +106,17 @@ a {
     height: 100%;
     border: none;
     margin: 0 auto;
+    transition: padding 0.15s linear;
   }
 }
 
 .top-panel-is-shown {
   .top-panel {
-    display: block;
+    transform: translateY(0);
   }
   
   .preview__iframe {
-    height: calc(100% - 75px);
+    padding-top: 74px;
   }
 
   &.mobile{
@@ -136,13 +138,17 @@ a {
 }
 
 .top-panel {
-  display: none;
   color: $white;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 9999;
   background-color: $white;
   padding: 10px 20px;
   box-shadow: 1rem -0.9rem 2.1rem rgba($black, 0.275);
+  transition: transform 0.15s linear;
+  transform: translateY(-100%);
 
   &__screen-btn {
     background-color: #fff;
