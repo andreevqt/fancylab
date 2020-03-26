@@ -15,7 +15,7 @@ export const sleep = (ms) => {
 }
 
 export const useWindowSize = () => {
-  const isClient = typeof window === 'object';
+  const isClient = typeof window !== 'undefined';
 
   function getSize() {
     return {
@@ -24,7 +24,7 @@ export const useWindowSize = () => {
     };
   }
 
-  const [windowSize, setWindowSize] = useState(getSize);
+  const [windowSize, setWindowSize] = useState(getSize());
 
   useEffect(() => {
     if (!isClient) {
@@ -37,23 +37,28 @@ export const useWindowSize = () => {
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []); // Empty array ensures that effect is only run on mount and unmount
+  }, []);
+
+
+  console.log(windowSize);
+
 
   return windowSize;
-}
-
-export const up = (breakpoint) => {
-    
-}
-
-export const down = () => {
-
 }
 
 export const styleHidden = {
   visibility: "hidden",
   position: "absolute",
+  top: 0,
+  left: 0,
   width: 0,
   height: 0
 };
+
+export const breakpoints = {
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200
+}
 

@@ -2,18 +2,26 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import LazyImage from './LazyImage';
 import Skeleton from "react-loading-skeleton";
-import { styleHidden, useWindowSize } from "../util/util"
+import { styleHidden, useWindowSize, breakpoints } from "../util/util"
 
-
-const Template = ({ work,  }) => {
+const Template = ({ work, }) => {
   const [loading, setLoading] = useState(true);
-  const size = useWindowSize();
-  console.log(size);
+  const { width } = useWindowSize();
+  const { sm, md, lg, xl } = breakpoints;
+  let height = 130;
+
+  if (width > sm) {
+    height = 150;
+  }
+
+  if (width > lg) {
+    height = 190;
+  }
 
   return (
     <div className="work">
       <Link to={work.link} className="work__link">
-        {loading && <Skeleton height="190px" />}
+        {loading && <Skeleton height={height} />}
         <LazyImage
           className="work__image"
           src={work.preview}

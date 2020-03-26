@@ -4,7 +4,7 @@ import LazyLoad from "vanilla-lazyload";
 if (typeof document !== "undefined" && !document.lazyLoadInstance) {
   document.lazyLoadInstance = new LazyLoad({
     elements_selector: ".lazy",
-    load_delay: 1000
+    load_delay: 5000
   });
 }
 
@@ -21,12 +21,12 @@ const LazyImage = ({
 }) => {
   let el = null;
   useEffect(() => {
-    if (typeof document !== "undefined" && document.lazyLoadInstance) {
+    /* if (typeof document !== "undefined" && document.lazyLoadInstance) {
       document.lazyLoadInstance = new LazyLoad({
         elements_selector: ".lazy",
         load_delay: 3000
       });
-    }
+    } */
 
     if (typeof document !== "undefined") {
       document.lazyLoadInstance.update();
