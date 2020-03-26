@@ -27,7 +27,7 @@ const TopPanel = ({ backLink, work }) => {
       <div className="row">
         <div className="col">
           <a href={backLink} className="top-panel__btn  btn btn-link btn-special--link mr-3 btn-with-icon">
-            <TriangleLeft width="10" height="10" />
+            <TriangleLeft className="btn__icon" width="10" height="10" />
             Go Back
           </a>
         </div>

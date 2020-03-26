@@ -4,7 +4,7 @@ import LazyImage from './LazyImage';
 import Skeleton from "react-loading-skeleton";
 import { styleHidden, useWindowSize, breakpoints } from "../util/util"
 
-const Template = ({ work, }) => {
+const WorkSingle = ({ work, }) => {
   const [loading, setLoading] = useState(true);
   const { width } = useWindowSize();
   const { sm, md, lg, xl } = breakpoints;
@@ -44,16 +44,13 @@ const Template = ({ work, }) => {
 };
 
 const Works = ({ data, wrapperClass = "row works" }) => {
-
   return (
     <div className={wrapperClass}>
       {
         data.map((work) => {
           return (
             <div key={work.id} className="col-md-4 col-sm-6 mb-5">
-              <div className="work">
-                <Template work={work} />
-              </div>
+              <WorkSingle work={work} />
             </div>
           )
         })

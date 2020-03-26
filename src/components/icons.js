@@ -55,11 +55,59 @@ export const Cross = (props) => {
 export const TriangleLeft = (props) => {
   return (
     <svg
-      className="btn__icon"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       {...props}
     ><path d="M3 12l18-12v24z" />
     </svg>
+  );
+}
+
+export const WaveDown = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1920 72.15"
+      {...props}
+    >
+      <path d="M0 0v53.94c58.19-5.63 138-16.49 251.75-19.11 126-2.91 139.35 7.85 411 21.53 54 2.72 209.59 10.43 361.79 12.32 352.57 4.37 376.84-34.95 639-25.11 110.91 4.16 193.64 14 256.45 20.68V0z" fill="#3c3f52" opacity=".4" /><path d="M0 0v35.4c76.38 9.77 173 19 284.75 22.39 254.79 7.73 314.72-23.18 564.06-27.27 317.24-5.2 370.25 42.37 693.07 41.62A3288.86 3288.86 0 0 0 1920 49.45V0z" fill="#3c3f52" />
+    </svg>
+  );
+}
+
+export const ChevronDown = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z">      </path>
+    </svg>
   )
+}
+
+export const LinkedIn = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z" />
+    </svg>
+  );
+}
+
+export const Facebook = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z" />
+    </svg>
+  );
 }
