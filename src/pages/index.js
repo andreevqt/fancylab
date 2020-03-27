@@ -30,9 +30,9 @@ const Index = () => {
         buttonTarget="#works"
       />
       <Content
-        id="#works"
+        id="works"
         className="section section--after-hero"
-        heading="Tempaltes"
+        heading="Templates"
       >
         <Works wrapperClass="row works" data={latest(data.works, 3)} />
         <Link to="/templates" className="btn btn-special view-all mb-md-5 mb-3">View <span>All</span></Link>

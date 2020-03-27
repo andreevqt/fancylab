@@ -15,9 +15,7 @@
     }
   }
 
-  &--has-button {
-    padding-bottom: 20px;
-  }
+  
 
   &__particles {
     position: absolute;
@@ -146,6 +144,7 @@
     right: 0;
     bottom: 0;
   }
+
   &__wave-down {
     position: absolute;
     z-index: 1;
@@ -155,13 +154,13 @@
     transform: translateY(100%);
   }
 
-  @include media-breakpoint-down(sm) {
-    /* padding-bottom: 30px; */
-  }
-
   @include media-breakpoint-up(md) {
     padding-top: 94px;
     padding-bottom: 120px;
+  }
+
+  &--has-button {
+    padding-bottom: 20px;
   }
 }
 

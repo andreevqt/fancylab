@@ -12,9 +12,11 @@ const Hero = ({
   buttonTarget = "#"
 }) => {
   const classes = ['hero'];
+
   if (hasButton) {
     classes.push('hero--has-button');
   }
+  
   if (className) {
     classes.push(className);
   }
