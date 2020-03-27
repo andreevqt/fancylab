@@ -4,7 +4,7 @@ import LazyLoad from "vanilla-lazyload";
 if (typeof document !== "undefined" && !document.lazyLoadInstance) {
   document.lazyLoadInstance = new LazyLoad({
     elements_selector: ".lazy",
-    load_delay: 2000
+    load_delay: 1500
   });
 }
 

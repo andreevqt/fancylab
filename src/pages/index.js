@@ -1,8 +1,9 @@
 import React from "react"
 import Layout from '../components/Layout'
 import Hero from '../components/hero';
-import data from '../../data/data';
-import Works from '../components/Works';
+import data from "../../data/data";
+import Works from "../components/Works";
+import Content from "../components/Content"
 import { latest, asset } from '../util/util';
 import { Link } from 'gatsby';
 
@@ -28,14 +29,15 @@ const Index = () => {
         hasButton={true}
         buttonTarget="#works"
       />
-      <div id="works" className="section section--after-hero">
-        <div className="container">
-          <h2 className="section-heading">Templates</h2>
-          <Works wrapperClass="row works" data={latest(data.works, 3)} />
-          <Link to="/templates" className="btn btn-special view-all mb-md-5 mb-3">View <span>All</span></Link>
-        </div>
-      </div>
-    </Layout>
+      <Content
+        id="#works"
+        className="section section--after-hero"
+        heading="Tempaltes"
+      >
+        <Works wrapperClass="row works" data={latest(data.works, 3)} />
+        <Link to="/templates" className="btn btn-special view-all mb-md-5 mb-3">View <span>All</span></Link>
+      </Content>
+    </Layout >
   );
 }
 

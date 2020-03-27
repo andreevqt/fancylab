@@ -31,6 +31,36 @@
   }
 }
 
+.skeleton-card-preview {
+  margin-bottom: 30px;
+  height: 130px;
+
+  @include media-breakpoint-up(sm) {
+    height: 200px;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 400px;
+  }
+}
+
+.skeleton-work-single {
+  &__image {
+    margin-bottom: 30px;
+    height: 130px;
+  }
+
+  &__title {
+    @extend h2;
+  }
+
+  &__btn {
+    margin-top: 30px;
+    width: 180px;
+    height: 54px;
+  }
+}
+
 @keyframes loading {
   from {
     background-position: -200px 0;

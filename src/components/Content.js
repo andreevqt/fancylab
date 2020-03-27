@@ -2,17 +2,21 @@ import React from "react";
 
 const Content = ({
   children,
+  heading,
   ...rest
 }) => {
   return (
     <div
-      className="section section--after-hero"
       {...rest}
     >
       <div className="container">
-        <div className="row">
-          {children}
-        </div>
+        {
+          heading &&
+          <h2 className="section-heading">
+            {heading}
+          </h2>
+        }
+        {children}
       </div>
     </div>
   );

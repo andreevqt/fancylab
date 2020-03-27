@@ -16,15 +16,16 @@ const Skeleton = ({
     height: toStr(height)
   };
 
-  return [...Array(count)].map((elem, i) =>
+  return [...Array(count)].map((elem, i) => (
     <span
+      key={i}
       className={"skeleton " + className}
       style={style}
-      key={i}
     >
       &zwnj;
     </span>
-  );
+  ));
+
 }
 
 export default Skeleton;

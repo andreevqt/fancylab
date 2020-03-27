@@ -1,9 +1,10 @@
-import React from 'react';
-import Layout from '../components/Layout';
-import data from '../../data/data';
-import Hero from '../components/Hero';
-import WorksRow from '../components/Works';
-import { latest } from '../util/util'
+import React from "react";
+import Layout from "../components/Layout";
+import data from "../../data/data";
+import Hero from "../components/Hero";
+import WorksRow from "../components/Works";
+import { latest } from "../util/util";
+import Content from "../components/Content";
 
 const Templates = () => {
   return (
@@ -17,15 +18,13 @@ const Templates = () => {
           )
         }}
       />
-      <div className="section section--after-hero">
-        <div className="container">
-          <WorksRow
-            wrapperClass="row works"
-            data={latest(data.works)}
-          />
-        </div>
-      </div>
-    </Layout>
+      <Content className="section section--after-hero">
+        <WorksRow
+          wrapperClass="row works"
+          data={latest(data.works)}
+        />
+      </Content>
+    </Layout >
   )
 }
 
