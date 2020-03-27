@@ -1,21 +1,10 @@
 .hero {
+  $parent: &;
   position: relative;
   padding-top: 62px;
   padding-bottom: 30px;
   color: $white;
-  $parent: &;
-
-  &--small {
-    padding-bottom: 30px;
-    #{$parent}__heading {
-      margin-top: 40px;
-      @include media-breakpoint-down(sm) {
-        margin-top: 30px;
-      }
-    }
-  }
-
-  
+  min-height: 500px;
 
   &__particles {
     position: absolute;
@@ -157,6 +146,18 @@
   @include media-breakpoint-up(md) {
     padding-top: 94px;
     padding-bottom: 120px;
+    min-height: 575px;
+  }
+
+  &--small {
+    min-height: auto;
+    padding-bottom: 30px;
+    #{$parent}__heading {
+      margin-top: 40px;
+      @include media-breakpoint-down(sm) {
+        margin-top: 30px;
+      }
+    }
   }
 
   &--has-button {
