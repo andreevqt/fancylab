@@ -11,9 +11,12 @@
     height: auto;
     transform: translateY(0);
     transition: transform 0.15s ease-in;
+    border-radius: $border-radius;
   }
 
   &__title {
+    display: flex;
+    align-items: center;
     margin-top: 20px;
   }
 
@@ -52,11 +55,24 @@
   $parent: &;
   margin-bottom: 30px;
 
+  &__tag {
+    margin-bottom: 0.5rem;
+  }
+
+  &__tags {
+    margin-bottom: 15px;
+  }
+
   &:hover {
     #{$parent}__overlay {
       visibility: visible;
       opacity: 0.9;
     }
+  }
+
+  &__img,
+  &__link {
+    border-radius: $border-radius;
   }
 
   &__img {

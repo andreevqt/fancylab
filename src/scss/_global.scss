@@ -114,12 +114,12 @@ a {
   .top-panel {
     transform: translateY(0);
   }
-  
+
   .preview__iframe {
     padding-top: 74px;
   }
 
-  &.mobile{
+  &.mobile {
     .preview__iframe {
       left: calc(50% - 320px / 2);
       max-width: 370px;
@@ -199,4 +199,21 @@ a {
 
 .comments {
   margin-top: 30px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 7.5px;
+  line-height: 1;
+  border-radius: $border-radius;
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-right: 0.5rem;
+  
+  &--primary {
+    background-color: $purple;
+    color: $white;
+  }
 }

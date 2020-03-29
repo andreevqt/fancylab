@@ -18,7 +18,7 @@ const Work = ({
   }
 }) => {
   const { work } = pageContext;
-  const { title, slug, link, source, preview, description, subtitle } = work;
+  const { title, slug, link, source, preview, description, subtitle, tags } = work;
   const [loading, setLoading] = useState(true);
 
   return (
@@ -61,6 +61,18 @@ const Work = ({
             </div>
           </div>
           <div className="col pl-md-5">
+            {
+              tags && (
+                <div className="work-preview__tags">
+                  {loading
+                    ? <Skeleton width={40} height={20} style={{ marginBottom: "15px" }} />
+                    : tags.map((tag, index) => (
+                      <span key={index} className="work-preview__tag tag tag--primary">{tag}</span>
+                    ))
+                  }
+                </div>
+              )
+            }
             <h2 className="mb-3">{loading ? <Skeleton /> : title}</h2>
             <p className="mb-3">{loading ? <Skeleton count={2} width="70%" /> : description}</p>
             {

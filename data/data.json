@@ -8,8 +8,9 @@
       "description": "Responsive application landing page using bootstrap framework",
       "preview": "/images/take.jpg",
       "link": "/templates/take",
-      "pagesLink" : "https://qprquo.github.io/take",
-      "source": "https://github.com/qprquo/take"
+      "pagesLink": "https://qprquo.github.io/take",
+      "source": "https://github.com/qprquo/take",
+      "tags": []
     },
     {
       "id": 2,
@@ -19,8 +20,9 @@
       "description": "Responsive application landing page using bootstrap framework",
       "preview": "/images/weather-app.png",
       "link": "/templates/weather-app",
-      "pagesLink" : "https://qprquo.github.io/weather-app",
-      "source": "https://github.com/qprquo/weather-app"
+      "pagesLink": "https://qprquo.github.io/weather-app",
+      "source": "https://github.com/qprquo/weather-app",
+      "tags": []
     },
     {
       "id": 3,
@@ -30,8 +32,9 @@
       "description": "Responsive web design agency landing page using bootstrap framework",
       "preview": "/images/startuply.jpg",
       "link": "/templates/startuply",
-      "pagesLink" : "https://qprquo.github.io/startuply",
-      "source": "https://github.com/qprquo/startuply"
+      "pagesLink": "https://qprquo.github.io/startuply",
+      "source": "https://github.com/qprquo/startuply",
+      "tags": []
     },
     {
       "id": 4,
@@ -41,8 +44,9 @@
       "description": "Responsive library landing page using bootstrap framework",
       "preview": "/images/sevi.jpg",
       "link": "/templates/sevi",
-      "pagesLink" : "https://qprquo.github.io/sevi",
-      "source": "https://github.com/qprquo/sevi"
+      "pagesLink": "https://qprquo.github.io/sevi",
+      "source": "https://github.com/qprquo/sevi",
+      "tags": []
     },
     {
       "id": 5,
@@ -52,19 +56,25 @@
       "description": "Responsive application landing page using bootstrap framework",
       "preview": "/images/applab.jpg",
       "link": "/templates/applab",
-      "pagesLink" : "https://qprquo.github.io/AppLab",
-      "source": "https://github.com/qprquo/AppLab"
+      "pagesLink": "https://qprquo.github.io/AppLab",
+      "source": "https://github.com/qprquo/AppLab",
+      "tags": [
+        "new"
+      ]
     },
     {
       "id": 6,
       "title": "Webovio",
       "slug": "webovio",
-      "subtitle": "Web design agency landing page",
-      "description": "Web design agency landing page using bootstrap framework",
+      "subtitle": "Creative agency website template",
+      "description": "Creative agency website template using bootstrap framework",
       "preview": "/images/webovio.png",
       "link": "/templates/webovio",
-      "pagesLink" : "https://qprquo.github.io/webovio",
-      "source": "https://github.com/qprquo/webovio"
+      "pagesLink": "https://qprquo.github.io/webovio",
+      "source": "https://github.com/qprquo/webovio",
+      "tags": [
+        "new"
+      ]
     },
     {
       "id": 7,
@@ -74,8 +84,11 @@
       "description": "Web developing agency landing page using bootstrap framework",
       "preview": "/images/productly.png",
       "link": "/templates/productly",
-      "pagesLink" : "https://qprquo.github.io/productly",
-      "source": "https://github.com/qprquo/productly"
+      "pagesLink": "https://qprquo.github.io/productly",
+      "source": "https://github.com/qprquo/productly",
+      "tags": [
+        "new"
+      ]
     }
   ]
 }

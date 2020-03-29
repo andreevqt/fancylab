@@ -20,6 +20,9 @@ const WorkSingle = ({ work, }) => {
           />
         </Link>
         <div className="work__title">
+          {work.tags.map((tag, index) => (
+            <span key={index} className="work__title-tag tag tag--primary">{tag}</span>
+          ))}
           {work.title}
         </div>
         <div className="work__description">

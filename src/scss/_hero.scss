@@ -57,35 +57,16 @@
     color: rgba($white, 0.7);
   }
 
-  &__typing-wrap {
-    overflow: hidden;
-    display: inline-flex;
-    flex-direction: column;
+  &__typing {
+    color: #fff;
     margin-top: 40px;
-    color: $white;
-    font-size: 1rem;
-    letter-spacing: 0.15em;
-    position: relative;
     @include media-breakpoint-up(md) {
-      font-size: 2rem;
-      margin-top: 120px;
+      margin-top: 0;
     }
   }
 
-  &__typing {
-    margin-top: 1rem;
-    display: inline-block;
-    color: $white;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: 0.15em solid $white; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
-  }
-
-  &__dollar {
-    display: block;
-    color: $yellow;
-    margin-right: 1rem;
+  &__typing-hightlight {
+    color: $purple;
   }
 
   &__circle {

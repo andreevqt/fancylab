@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import Layout from '../components/Layout'
 import Hero from '../components/hero';
 import data from "../../data/data";
@@ -6,18 +6,50 @@ import Works from "../components/Works";
 import Content from "../components/Content"
 import { latest, asset } from '../util/util';
 import { Link } from 'gatsby';
+import malarkey from "malarkey";
 
 const Index = () => {
+  const words = [
+    "free",
+    "open source",
+    "easy to use",
+    "easy to install",
+    "modern",
+    "responsive",
+    "bootstrap 4 based"
+  ];
+
+  let el = useRef();
+
+  useEffect(() => {
+    if (typeof document !== "undefined" && el.current) {
+      let malarkeyInstance = malarkey((text) => {
+        if (el.current) {
+          el.current.textContent = text;
+        }
+      }, {
+        typeSpeed: 50,
+        deleteSpeed: 50,
+        pauseDelay: 2000,
+        repeat: true
+      });
+
+      words.map((word) => {
+        malarkeyInstance
+          .type(word)
+          .pause()
+          .delete();
+      });
+    }
+
+  }, []);
   return (
     <Layout pageTitle="Home">
       <Hero
         leftCol={() => {
           return (
-            <div className="hero__typing-wrap">
-              <span className="hero__dollar">
-                sp@root: ~/$
-                </span>
-              <span className="hero__typing">Per aspera ad astra</span>
+            <div className="d-flex align-items-center h-100">
+              <h1 className="hero__typing">Collection of  <span ref={el} className="hero__typing-hightlight">Free</span> html templates</h1>
             </div>
           )
         }}
