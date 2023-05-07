@@ -23,7 +23,7 @@
     "gatsby-plugin-sass": "^2.1.28",
     "gatsby-plugin-sitemap": "^2.2.30",
     "gatsby-source-filesystem": "^2.1.48",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "malarkey": "^2.0.2",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
